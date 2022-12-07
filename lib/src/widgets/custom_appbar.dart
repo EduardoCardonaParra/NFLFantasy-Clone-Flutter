@@ -29,7 +29,6 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
           ),
           _AppBarButton(
             maxAppBarSize: maxAppBarSize,
-            icon: FontAwesomeIcons.gear,
             isText: true,
           )
           
@@ -53,7 +52,7 @@ class _AppBarButton extends StatelessWidget {
   const _AppBarButton({
     Key? key,
     
-    required this.icon,
+    this.icon = FontAwesomeIcons.gear,
     required this.maxAppBarSize,
     this.isText =false
   }) : super(key: key);
